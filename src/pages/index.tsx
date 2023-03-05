@@ -43,7 +43,7 @@ export default function Home() {
                 </p>
                 <ul className="flex flex-col md:flex-row mt-8 space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-neutral-500 dark:text-neutral-400">
                     <li>
-                        <Link className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all" href="mailto:daimus.suudi@gmail.com">
+                        <Link className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all" href="mailto:me@daimus.id">
                             <ArrowUpRightIcon className="h-6 w-6 mr-1" />
                             <p className="h-7">send me mail</p>
                         </Link>
