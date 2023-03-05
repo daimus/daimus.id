@@ -11,7 +11,7 @@ export default function Home() {
         <>
             <section className="max-w-lg text-gray-50">
                 <h1 className="font-bold text-3xl font-serif">Daimus Suudi</h1>
-                <p className="my-5">
+                <p className="my-5 text-justify">
                     Hi 👋, I&apos;m <span className="p-1 px-2 rounded bg-gray-900 font-medium">Daimus</span>. I&apos;m <span className="p-1 px-2 rounded bg-gray-900 font-medium"> Fullstack Developer <span className="font-extrabold">@</span>IDprogrammer</span>. I have a deep passion for technology and a strong background in computer science, allowing me to create software solutions that meet the needs of businesses and users alike.
                 </p>
                 <div className="flex flex-col md:flex-row">
@@ -35,10 +35,10 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <p className="my-5">
+                <p className="my-5 text-justify">
                     Throughout my career, I have developed a wide range of technical skills, including proficiency in multiple programming languages, database management, software architecture, and project management.
                 </p>
-                <p className="my-5">
+                <p className="my-5 text-justify">
                     My experience has also taught me the importance of effective communication and collaboration. I am a skilled communicator who is able to translate technical concepts to non-technical stakeholders, and I thrive in team environments, where I can collaborate with others to deliver high-quality software solutions.
                 </p>
                 <ul className="flex flex-col md:flex-row mt-8 space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-neutral-500 dark:text-neutral-400">
