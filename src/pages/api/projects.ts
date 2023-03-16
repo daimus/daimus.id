@@ -3,6 +3,15 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import IProject from "@/types/IProject";
 
 const projects = [{
+  "name": "🛒 Order Management System",
+  "slug": "oms",
+  "description": "Application that allows users to shop online, browse product catalogs, add items to a cart, and complete purchases. It also provides payment processing, and product & order management capabilities.",
+  "thumbnail": "/images/portfolio/oms/thumbnail.jpg",
+  "tags": ["Java", "Spring Boot", "ReactJS", "NextJS", "Tailwind", "Docker", "CI/CD", "Kafka", "Websocket"],
+  "demoUrl": "",
+  "repositoryUrl": "https://github.com/Ecommerce-Capstone",
+  "isArchived": false
+},{
   "name": "🦠 Waspada Covid19 (Corona Virus Dashboard)",
   "slug": "waspada-covid19",
   "description": "Dashboard of statistics on the growth of the COVID-19 virus in Indonesia and the world. Data taken from api kawalancorona.com",
@@ -39,6 +48,24 @@ const projects = [{
   "repositoryUrl": "https://github.com/daimus/premier-leauge-pwa",
   "isArchived": false
 },{
+  "name": "⛓ s.daimus.id",
+  "slug": "s.daimus.id",
+  "description": "Short link/Bio link to share bio and link. Multi language usable and dark or light theme. Accompanied by a donate button connected to a crypto wallet",
+  "thumbnail": "/images/portfolio/s.daimus.id/thumbnail.jpg",
+  "tags": ["NextJS", "dApp", "Web3", "TailwindCSS"],
+  "demoUrl": "https://s.daimus.id",
+  "repositoryUrl": "https://github.com/daimus/s.daimus.id",
+  "isArchived": false
+},{
+  "name": "🙋‍ daimus.id",
+  "slug": "daimus.id",
+  "description": "My personal website in lieu of a conventional resume.",
+  "thumbnail": "/images/portfolio/daimus.id/thumbnail.jpg",
+  "tags": ["NuxtJS", "TailwindCSS"],
+  "demoUrl": "https://daimus.id",
+  "repositoryUrl": "https://github.com/daimus/daimus.id",
+  "isArchived": false
+},{
   "name": "📝 3GWBQ (Quiz App)",
   "slug": "3gwbq",
   "description": "Quiz application with 3 types of questions, namely multiple choice, matching words, and filling in empty words",
@@ -64,24 +91,6 @@ const projects = [{
   "tags": ["Backpropagation", "Python", "PyQT"],
   "demoUrl": "",
   "repositoryUrl": "",
-  "isArchived": false
-},{
-  "name": "⛓ s.daimus.id",
-  "slug": "s.daimus.id",
-  "description": "Short link/Bio link to share bio and link. Multi language usable and dark or light theme. Accompanied by a donate button connected to a crypto wallet",
-  "thumbnail": "/images/portfolio/s.daimus.id/thumbnail.jpg",
-  "tags": ["NextJS", "Web3Modal", "Wagmi", "TailwindCSS"],
-  "demoUrl": "https://s.daimus.id",
-  "repositoryUrl": "https://github.com/daimus/s.daimus.id",
-  "isArchived": false
-},{
-  "name": "🙋‍ daimus.id",
-  "slug": "daimus.id",
-  "description": "My personal website in lieu of a conventional resume.",
-  "thumbnail": "/images/portfolio/daimus.id/thumbnail.jpg",
-  "tags": ["NuxtJS", "TailwindCSS"],
-  "demoUrl": "https://daimus.id",
-  "repositoryUrl": "https://github.com/daimus/daimus.id",
   "isArchived": false
 },{
   "name": "🏫 SMK Islam Kanigoro",
