@@ -7,7 +7,7 @@ const projects = [{
   "slug": "oms",
   "description": "Application that allows users to shop online, browse product catalogs, add items to a cart, and complete purchases. It also provides payment processing, and product & order management capabilities.",
   "thumbnail": "/images/portfolio/oms/thumbnail.jpg",
-  "tags": ["Java", "Spring Boot", "ReactJS", "NextJS", "Tailwind", "Docker", "CI/CD", "Kafka", "Websocket"],
+  "tags": ["Microservice", "Clean Architecture", "Java", "Spring Boot", "NextJS", "Tailwind", "CI/CD", "Kafka", "Websocket"],
   "demoUrl": "",
   "repositoryUrl": "https://github.com/Ecommerce-Capstone",
   "isArchived": false
