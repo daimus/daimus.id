@@ -12,7 +12,7 @@ export default function Home() {
             <section className="max-w-lg text-gray-50">
                 <h1 className="font-bold text-3xl font-serif">Daimus Suudi</h1>
                 <p className="my-5 text-justify">
-                    Hi 👋, I&apos;m <span className="p-1 px-2 rounded bg-gray-900 font-medium">Daimus</span>. I&apos;m <span className="p-1 px-2 rounded bg-gray-900 font-medium"> Fullstack Developer <span className="font-extrabold">@</span>IDprogrammer</span>. I have a deep passion for technology and a strong background in computer science, allowing me to create software solutions that meet the needs of businesses and users alike.
+                    Hi 👋, I&apos;m <span className="p-1 px-2 rounded bg-gray-900 font-medium">Daimus</span>. I&apos;m <span className="p-1 px-2 rounded bg-gray-900 font-medium"> Software Engineer </span>. I have a deep passion for technology and a strong background in computer science, allowing me to create software solutions that meet the needs of businesses and users alike.
                 </p>
                 <div className="flex flex-col md:flex-row">
                     <div>
