@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css"
-import { Inter } from "next/font/google";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import {Analytics} from "@/app/components/Analytics";
+import { Inter as FontSans } from "next/font/google"
+import { cn } from "@/lib/utils"
 
-const inter = Inter({ subsets: ["latin"] });
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
 
 export const metadata: Metadata = {
   title: "Daimus",
@@ -19,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased min-h-scree bg-white dark:bg-zinc-900 text-gray-800 dark:text-slate-50 ${inter.className}`}>
+      <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
         <div className="max-w-screen mx-auto">
           <header className="sticky top-0  backdrop-blur-xl py-2 z-50">
             <Navbar/>
