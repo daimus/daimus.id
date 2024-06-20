@@ -2,13 +2,14 @@ import { sql } from "@vercel/postgres";
 import {Button} from "@/components/ui/button";
 import {
     AlertDialog,
-    AlertDialogAction,
+    AlertDialogCancel,
     AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle,
     AlertDialogTrigger
 } from "@/components/ui/alert-dialog";
 import {notFound} from "next/navigation";
 import Image from "next/image";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
+import {Metadata} from "next";
 
 const statuses = {
     UNPAID : {
@@ -33,6 +34,20 @@ const statuses = {
     }
 }
 
+export const dynamic = 'force-dynamic'
+export const dynamicParams = true
+export const revalidate = 60
+export const fetchCache = 'default-no-store'
+export const preferredRegion = 'auto'
+type Props = {
+    params: { id: string }
+    searchParams: { [key: string]: string | string[] | undefined }
+}
+
+export const metadata: Metadata = {
+    title: 'Order | daimus.id',
+    description: 'Shop with ease and confidence on our order page. Enjoy fast, secure checkout and excellent customer service. Discover a wide range of products tailored to your needs. Place your order now and experience quick delivery!',
+}
 export default async function DetailOrderPage({params} : { params: { id: string }
 }){
     let order;
@@ -202,7 +217,7 @@ export default async function DetailOrderPage({params} : { params: { id: string 
                                                 </AlertDialogDescription>
                                             </AlertDialogHeader>
                                             <AlertDialogFooter>
-                                                <AlertDialogAction>Close</AlertDialogAction>
+                                                <AlertDialogCancel>Close</AlertDialogCancel>
                                             </AlertDialogFooter>
                                         </AlertDialogContent>
                                     </AlertDialog>
