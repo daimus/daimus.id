@@ -58,7 +58,7 @@ import { useEffect, useState } from 'react';
     return (
         <div className="flex items-start justify-center w-full gap-1.5 count-down-main text-center">
             {/*@ts-ignore*/}
-            {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+            {timerComponents.length ? timerComponents : <span>Time&apos;s up!</span>}
             </div>
     );
 }
