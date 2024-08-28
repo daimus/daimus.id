@@ -1,12 +1,15 @@
 import {Metadata} from "next";
-import Countdown from "@/app/leaving-ikon/countdown";
+import CountdownTimer from "@/app/leaving-ikon/countdown";
 
 export const metadata: Metadata = {
     title: 'Leaving Ikon 👋| daimus.id',
     description: 'Countdown Daimus Leaving Ikon 👋',
 }
 
+const TARGET_DATE = '2024-10-12T23:59:59';
+
 export default async function LeavingIkonPage(){
+    const isTimeExceeded = (new Date(TARGET_DATE)) < (new Date());
     return (
         <div className="bg-white">
             <div className="relative isolate px-6 pt-14 lg:px-8">
@@ -26,15 +29,19 @@ export default async function LeavingIkonPage(){
                     <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                         <div
                             className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                            I’ll miss working with you and wish you all the best in the future.{' '}
+                            {
+                                isTimeExceeded ? 'Kontakku masih yang kemarin 😉' : 'I’ll miss working with you and wish you all the best in the future.'
+                            }
                         </div>
                     </div>
                     <div className="text-center">
                         <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                            Daimus Leaving IKON 👋
+                            {
+                                isTimeExceeded ? 'See You On Top Guys ✊' : 'Daimus Leaving IKON 👋'
+                            }
                         </h1>
                         <div className="mt-6 text-lg leading-8 text-gray-600">
-                            <Countdown targetDate="2024-10-12T23:59:59" />
+                            <CountdownTimer targetDate={TARGET_DATE} />
                         </div>
                     </div>
                 </div>
