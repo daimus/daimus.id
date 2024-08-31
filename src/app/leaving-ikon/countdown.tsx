@@ -4,7 +4,7 @@
 
 // @ts-ignore
  export default function CountdownTimer({ targetDate }) {
-    const CountDownItem = ({timeLeft, unit}) => {
+    const CountDownItem = ({timeLeft, unit} : {timeLeft: number, unit: string}) => {
         return (
             <>
                 <div className="timer mb-4">
@@ -20,7 +20,7 @@
         )
     }
 
-     const renderer = ({days, hours, minutes, seconds, completed}) => {
+     const renderer = ({days, hours, minutes, seconds, completed} : {days : number, hours: number, minutes: number, seconds: number, completed: boolean}) => {
          return (
              <>
                  <CountDownItem timeLeft={days} unit="days" />
