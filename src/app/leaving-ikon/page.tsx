@@ -2,7 +2,7 @@ import {Metadata} from "next";
 import CountdownTimer from "@/app/leaving-ikon/countdown";
 
 export const metadata: Metadata = {
-    title: 'Leaving Ikon 👋| daimus.id',
+    title: 'See you guys 😭',
     description: 'Countdown Daimus Leaving Ikon 👋',
 }
 
