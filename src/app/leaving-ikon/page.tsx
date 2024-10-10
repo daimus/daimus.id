@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     description: 'Countdown Daimus Leaving Ikon 👋',
 }
 
-const TARGET_DATE = '2024-10-12T23:59:59';
+const TARGET_DATE = '2024-10-11T17:00:00';
 
 export default async function LeavingIkonPage(){
     const isTimeExceeded = (new Date(TARGET_DATE)) < (new Date());
