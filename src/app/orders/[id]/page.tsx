@@ -1,15 +1,20 @@
 import { sql } from "@vercel/postgres";
 import {Button} from "@/components/ui/button";
-import {
-    AlertDialog,
-    AlertDialogCancel,
-    AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle,
-    AlertDialogTrigger
-} from "@/components/ui/alert-dialog";
 import {notFound} from "next/navigation";
-import Image from "next/image";
+import QRCode from "react-qr-code";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription, DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
 import {Metadata} from "next";
+import {qrisConverter} from "@/lib/qris-converter";
+import PayDialog from "@/app/orders/[id]/pay-dialog";
+import {formatter} from "@/lib/utils";
 
 const statuses = {
     UNPAID : {
@@ -68,9 +73,11 @@ export default async function DetailOrderPage({params} : { params: { id: string 
         return notFound();
     }
 
-    let numberFormat = new Intl.NumberFormat('id', {
-        style: 'currency',
-        currency: 'IDR',
+    const result = qrisConverter({
+        qrisCode: process.env.NEXT_PUBLIC_QRIS_CODE,
+        amount: parseInt(order.total),
+        feeType: undefined,
+        fee: 0
     });
 
     return (
@@ -163,7 +170,7 @@ export default async function DetailOrderPage({params} : { params: { id: string 
                                                                     </div>
                                                                     <div className="flex pl-4 sm:pl-6">
                                                                         <dt className="font-medium text-gray-900">Price</dt>
-                                                                        <dd className="ml-2 text-gray-700">{numberFormat.format(item.price)}</dd>
+                                                                        <dd className="ml-2 text-gray-700">{formatter.format(item.price)}</dd>
                                                                     </div>
                                                                 </dl>
                                                             </div>
@@ -181,47 +188,29 @@ export default async function DetailOrderPage({params} : { params: { id: string 
                             <dl className="space-y-6 pt-8 text-sm">
                                 <div className="flex justify-between">
                                     <dt className="font-medium text-gray-900">Subtotal</dt>
-                                    <dd className="text-gray-700">{numberFormat.format(order.subtotal)}</dd>
+                                    <dd className="text-gray-700">{formatter.format(order.subtotal)}</dd>
                                 </div>
                                 <div className="flex justify-between">
                                     <dt className="flex font-medium text-gray-900">
                                         Discount
                                     </dt>
-                                    <dd className="text-gray-700">{numberFormat.format(order.discount)}</dd>
+                                    <dd className="text-gray-700">{formatter.format(order.discount)}</dd>
                                 </div>
                                 <div className="flex justify-between">
                                     <dt className="font-medium text-gray-900">VAT</dt>
-                                    <dd className="text-gray-700">{numberFormat.format(order.vat)}</dd>
+                                    <dd className="text-gray-700">{formatter.format(order.vat)}</dd>
                                 </div>
                                 <div className="flex justify-between">
                                     <dt className="font-medium text-gray-900">Shipping</dt>
-                                    <dd className="text-gray-700">{numberFormat.format(order.shipping_fee)}</dd>
+                                    <dd className="text-gray-700">{formatter.format(order.shipping_fee)}</dd>
                                 </div>
                                 <div className="flex justify-between">
                                     <dt className="font-medium text-gray-900">Total</dt>
-                                    <dd className="text-gray-900">{numberFormat.format(order.total)}</dd>
+                                    <dd className="text-gray-900">{formatter.format(order.total)}</dd>
                                 </div>
                             </dl>
                             {
-                                (order.status === 'UNPAID' && order?.qris_image) && <div className="mt-4">
-                                    <AlertDialog>
-                                        <AlertDialogTrigger asChild>
-                                            <Button className="w-full">Pay</Button>
-                                        </AlertDialogTrigger>
-                                        <AlertDialogContent>
-                                            <AlertDialogHeader>
-                                                <AlertDialogDescription>
-                                                    <Image
-                                                        src={order.qris_image}
-                                                        width={500} height={500} alt="qris"/>
-                                                </AlertDialogDescription>
-                                            </AlertDialogHeader>
-                                            <AlertDialogFooter>
-                                                <AlertDialogCancel>Close</AlertDialogCancel>
-                                            </AlertDialogFooter>
-                                        </AlertDialogContent>
-                                    </AlertDialog>
-                                </div>
+                                (order.status === 'UNPAID') && <PayDialog qrCode={result} totalAmount={order.total} />
                             }
                         </div>
                     </div>
