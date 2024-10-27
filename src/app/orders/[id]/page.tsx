@@ -1,16 +1,6 @@
 import { sql } from "@vercel/postgres";
-import {Button} from "@/components/ui/button";
 import {notFound} from "next/navigation";
-import QRCode from "react-qr-code";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription, DialogFooter,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-} from "@/components/ui/dialog"
 import {Metadata} from "next";
 import {qrisConverter} from "@/lib/qris-converter";
 import PayDialog from "@/app/orders/[id]/pay-dialog";
@@ -74,7 +64,7 @@ export default async function DetailOrderPage({params} : { params: { id: string 
     }
 
     const result = qrisConverter({
-        qrisCode: process.env.NEXT_PUBLIC_QRIS_CODE,
+        qrisCode: process.env.NEXT_PUBLIC_QRIS_CODE || "",
         amount: parseInt(order.total),
         feeType: undefined,
         fee: 0

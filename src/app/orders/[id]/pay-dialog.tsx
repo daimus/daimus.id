@@ -13,7 +13,7 @@ import html2canvas from "html2canvas";
 import {cn, formatter} from "@/lib/utils";
 import {Send, Smartphone, SquareCheckBig} from "lucide-react";
 
-export default function PayDialog ({qrCode, totalAmount}){
+export default function PayDialog ({qrCode, totalAmount} : {qrCode : string, totalAmount: number}){
     const [isPayDialogOpen, setIsPayDialogOpen] = useState(false);
     const [isHidden, setIsHidden] = useState(true);
 
