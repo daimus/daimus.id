@@ -5,14 +5,14 @@ const experiences = [
         name: 'PT Ikonsultan Inovatama',
         position: 'Software Engineer',
         imageUrl: '/images/ikonsultan_circle.png',
-        year: '2021-2023',
+        year: '2023-2024',
     },
     {
         id: 1,
         name: 'IDprogrammer',
         position: 'Software Engineer',
         imageUrl: '/images/idprogrammer_circle.png',
-        year: '2023-2024',
+        year: '2021-2023',
     }
 ]
 
@@ -26,7 +26,7 @@ export default function Experience (){
                     </h2>
                     <div className="flex flex-col gap-1 w-full mt-0">
                         <h3 className="flex text-lg font-semibold  text-zinc-800 mr-12 mt-0">
-                            <span className=" ml-2"> 5+ years of professional experience in software development
+                            <span className=" ml-2">4+ years of professional experience in software development
                             </span>
                         </h3>
 

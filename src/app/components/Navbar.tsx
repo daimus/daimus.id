@@ -10,22 +10,21 @@ const Navbar = () => {
 
     return (
 
-        <nav className="px-4 md:px-0 py-1 max-w-[700px] mx-auto flex justify-between items-center">
+        <nav className="px-4 md:px-0 py-2 max-w-[700px] mx-auto flex justify-between items-center">
 
             <Link href="/" className=" hover:text-teal-500 hidden shrink-0 sm:block">
                 <Image
-                    src="/vercel.svg"
+                    src="/images/logo.png"
                     width={40}
                     height={40}
-                    alt="emje"
+                    alt="logo"
                 />
             </Link>
 
             <ul className="flex items-center font-medium text-sm text-zinc-600 dark:text-zinc-400">
                 {menu.map((item, index) => (
                     <li key={index}>
-                        <Link href={item.path} className={`
-              hover:text-zinc-800 dark:hover:text-zinc-100  sm:px-4 sm:py-2 px-3 py-2 rounded-full bg-transparent${pathname == item.path
+                        <Link href={item.path} className={`hover:text-zinc-800 sm:px-4 sm:py-2 px-3 py-2 rounded-full bg-transparent${pathname == item.path
                             ?
                             " text-zinc-800 dark:text-zinc-100 bg-zinc-200/50 dark:bg-zinc-800"
                             :

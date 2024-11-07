@@ -68,7 +68,7 @@ export default function PayDialog ({qrCode, totalAmount} : {qrCode : string, tot
                         </DialogHeader>
                         <DialogFooter>
                             <div className="w-full flex flex-col space-y-4">
-                                <Button className="block" onClick={handleDownload}>Download</Button>
+                                {/*<Button className="block" onClick={handleDownload}>Download</Button>*/}
                                 <Button className="block" variant="secondary" onClick={() => setIsPayDialogOpen(false)}>Close</Button>
                             </div>
                         </DialogFooter>

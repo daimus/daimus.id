@@ -28,7 +28,7 @@ export default function RootLayout({
           <header className="sticky top-0  backdrop-blur-xl py-2 z-50">
             <Navbar/>
           </header>
-          <main className="max-w-3xl mx-auto">{children}</main>
+          <main>{children}</main>
           <Footer/>
         </div>
         <Analytics />
