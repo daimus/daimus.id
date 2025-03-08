@@ -9,13 +9,13 @@ export default function ProjectItem ({project} : {project : Project}){
         <>
             <li>
                 <div className="flex space-x-12">
-                    <div>
+                    <div className="hidden md:block">
                         <span className="text-lg/8 font-semibold">{project.year}</span>
                     </div>
                     <div className="flex-1">
                         <h3 className="text-lg/8 font-semibold hover:text-emerald-500">
                             <Link href={project.href}>
-                                {project.title}
+                                <span className="md:hidden mr-2">[{project.year}]</span>{project.title}
                             </Link>
                         </h3>
                         <Image alt={project.title} src={project.thumbnail} width={1080} height={720}
