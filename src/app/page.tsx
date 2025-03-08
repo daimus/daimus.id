@@ -12,16 +12,16 @@ export default function Home() {
           <Image src="/images/daimus.jpg" alt="daimus suudi" width={200} height={200} className="rounded-full w-24 h-24" />
         <h1 className="font-semibold text-2xl">Daimus Suudi</h1>
         <p className="text-base">
-            Software Engineer, Farmer.
+            Engineering Code, Cultivating Life
         </p>
       </div>
         <div className="w-full flex flex-col justify-center items-center space-y-4 mt-12">
-            <Link href="/about" className="block w-full">
+            <Link href={"/about"} className="block w-full">
                 <BaseButton>
                     About
                 </BaseButton>
             </Link>
-            <Link href="/project" className="block w-full">
+            <Link href={"/project"} className="block w-full">
                 <BaseButton>
                     Project
                 </BaseButton>
