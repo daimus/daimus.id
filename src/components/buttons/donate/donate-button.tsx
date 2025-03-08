@@ -23,7 +23,9 @@ export default function DonateButton (){
             <Drawer open={isOpen} onOpenChange={setIsOpen}>
                 <DrawerContent>
                     <div className="container max-w-2xl mx-auto space-y-4 py-24">
-                        <DonateQrisDialog />
+                        <div className="mx-4">
+                            <DonateQrisDialog />
+                        </div>
                     </div>
                 </DrawerContent>
             </Drawer>

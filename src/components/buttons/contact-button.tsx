@@ -41,48 +41,51 @@ export default function ContactButton (){
             <Drawer open={isOpen} onOpenChange={setIsOpen}>
                 <DrawerContent>
                     <div className="container max-w-2xl mx-auto py-24">
-                        <div className="mb-6 flex h-full w-full items-center">
-                            <div className="mr-3 flex h-6 w-6 items-center justify-center text-black">
-                                <Phone className="dark:text-white" />
-                            </div>
-                            <div>
-                                <div className="mb-3">
-                                    <p className="font-semibold leading-normal">
-                                        +62 87-773-775-774
-                                    </p>
+                        <div className="mx-4">
+                            <div className="mb-6 flex h-full w-full items-center">
+                                <div className="mr-3 flex h-6 w-6 items-center justify-center text-black">
+                                    <Phone className="dark:text-white"/>
+                                </div>
+                                <div>
+                                    <div className="mb-3">
+                                        <p className="font-semibold leading-normal">
+                                            +62 87-773-775-774
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="mb-6 flex h-full w-full items-center">
-                            <div className="mr-3 flex h-6 w-6 items-center justify-center text-black">
-                                <Mail className="dark:text-white"/>
-                            </div>
-                            <div>
-                                <div className="mb-3">
-                                    <Link href="mailto:mail@daimus.id"
-                                          className="font-semibold leading-normal hover:text-emerald-500">
-                                        mail@daimus.id
-                                    </Link>
+                            <div className="mb-6 flex h-full w-full items-center">
+                                <div className="mr-3 flex h-6 w-6 items-center justify-center text-black">
+                                    <Mail className="dark:text-white"/>
+                                </div>
+                                <div>
+                                    <div className="mb-3">
+                                        <Link href="mailto:mail@daimus.id"
+                                              className="font-semibold leading-normal hover:text-emerald-500">
+                                            mail@daimus.id
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="mb-6 flex h-full w-full items-center">
-                            <div className="mr-3 flex h-6 w-6 items-center justify-center text-black">
-                                <LinkedinIcon />
-                            </div>
-                            <div>
-                                <div className="mb-3">
-                                    <Link href="https://linkedin.com/in/daimus"
-                                          className="font-semibold leading-normal hover:text-emerald-500">
-                                        in/daimus
-                                    </Link>
+                            <div className="mb-6 flex h-full w-full items-center">
+                                <div className="mr-3 flex h-6 w-6 items-center justify-center text-black">
+                                    <LinkedinIcon/>
+                                </div>
+                                <div>
+                                    <div className="mb-3">
+                                        <Link href="https://linkedin.com/in/daimus"
+                                              className="font-semibold leading-normal hover:text-emerald-500">
+                                            in/daimus
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
+                            <Button variant="outline" className="w-full text-center cursor-pointer"
+                                    onClick={saveContact}>
+                                <Contact/>
+                                Save Contact
+                            </Button>
                         </div>
-                        <Button variant="outline" className="w-full text-center cursor-pointer" onClick={saveContact}>
-                            <Contact/>
-                            Save Contact
-                        </Button>
                     </div>
                 </DrawerContent>
             </Drawer>
