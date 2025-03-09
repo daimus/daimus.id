@@ -18,9 +18,9 @@ export default function ProjectItem ({project} : {project : Project}){
                                 <span className="md:hidden mr-2">[{project.year}]</span>{project.title}
                             </Link>
                         </h3>
-                        <Image alt={project.title} src={project.thumbnail} width={1080} height={720}
+                        <Image alt={project.title} src={project.thumbnail} width={1280} height={720}
                              className="mt-4 aspect-[16/9] w-full rounded-2xl object-cover"/>
-                        <ul role="list" className="mt-4 flex gap-x-2">
+                        <ul role="list" className="mt-4 flex flex-wrap gap-x-2">
                             {
                                 project.tags.map((tag, index) => (
                                     <li key={index}>
