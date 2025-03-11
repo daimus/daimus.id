@@ -9,12 +9,12 @@ import {cn} from "@/lib/utils";
 
 const menu = [
     {
-        title: "Project",
-        path: "/project",
-    },
-    {
         title: "About",
         path: "/about",
+    },
+    {
+        title: "Project",
+        path: "/project",
     }
 ];
 
