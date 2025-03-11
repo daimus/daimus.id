@@ -21,7 +21,7 @@ export default async function Project (){
         <>
             <div className="space-y-4">
                 <h1 className="text-2xl font-bold">Project</h1>
-                <ul role="list" className="mx-auto gap-x-6 gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2">
+                <ul role="list" className="mx-auto gap-x-6 gap-y-24 space-y-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2">
                     {
                         projects.map((project, index) => (
                             <ProjectItem key={index} project={project} />

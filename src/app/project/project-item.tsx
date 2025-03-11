@@ -13,13 +13,13 @@ export default function ProjectItem ({project} : {project : Project}){
                         <span className="text-lg/8 font-semibold">{project.year}</span>
                     </div>
                     <div className="flex-1">
-                        <h3 className="text-lg/8 font-semibold hover:text-emerald-500">
-                            <Link href={project.href}>
+                        <Link href={project.href}>
+                            <h3 className="text-lg/8 font-semibold hover:text-emerald-500">
                                 <span className="md:hidden mr-2">[{project.year}]</span>{project.title}
-                            </Link>
-                        </h3>
-                        <Image alt={project.title} src={project.thumbnail} width={1280} height={720}
+                            </h3>
+                            <Image alt={project.title} src={project.thumbnail} width={1280} height={720}
                              className="mt-4 aspect-[16/9] w-full rounded-2xl object-cover"/>
+                        </Link>
                         <ul role="list" className="mt-4 flex flex-wrap gap-x-2">
                             {
                                 project.tags.map((tag, index) => (
@@ -30,7 +30,7 @@ export default function ProjectItem ({project} : {project : Project}){
                             }
                         </ul>
                         <p className="mt-4 text-base/7 text-justify">{project.description}</p>
-                        <div className="mt-4">
+                        <div className="mt-2">
                             <Link href={project.href} className="font-semibold text-emerald-500">
                                 Read Case Study <ArrowRight className="inline"/>
                             </Link>
