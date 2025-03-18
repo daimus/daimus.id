@@ -13,6 +13,10 @@ const menu = [
         path: "/about",
     },
     {
+        title: "Blog",
+        path: "/blog",
+    },
+    {
         title: "Project",
         path: "/project",
     }

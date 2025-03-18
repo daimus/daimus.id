@@ -26,6 +26,11 @@ export default function Home() {
                     Project
                 </BaseButton>
             </Link>
+            <Link href={"/blog"} className="block w-full">
+                <BaseButton>
+                    Blog
+                </BaseButton>
+            </Link>
             <ContactButton />
             <Suspense>
                 <DonateButton />
