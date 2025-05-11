@@ -17,11 +17,10 @@ export default function ContactButton (){
     const saveContact = () => {
         const contact = {
             name: "Daimus Suudi",
-            phone: "+6287773775774",
             email: "mail@daimus.id"
         };
 
-        const vcard = "BEGIN:VCARD\nVERSION:4.0\nFN:" + contact.name + "\nTEL;TYPE=work,voice:" + contact.phone + "\nEMAIL:" + contact.email + "\nEND:VCARD";
+        const vcard = "BEGIN:VCARD\nVERSION:4.0\nFN:" + contact.name + "\nEMAIL:" + contact.email + "\nEND:VCARD";
         const blob = new Blob([vcard], { type: "text/vcard" });
         const url = URL.createObjectURL(blob);
 
@@ -42,18 +41,6 @@ export default function ContactButton (){
                 <DrawerContent>
                     <div className="container max-w-2xl mx-auto py-24">
                         <div className="mx-4">
-                            <div className="mb-6 flex h-full w-full items-center">
-                                <div className="mr-3 flex h-6 w-6 items-center justify-center text-black">
-                                    <Phone className="dark:text-white"/>
-                                </div>
-                                <div>
-                                    <div className="mb-3">
-                                        <p className="font-semibold leading-normal">
-                                            +62 87-773-775-774
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
                             <div className="mb-6 flex h-full w-full items-center">
                                 <div className="mr-3 flex h-6 w-6 items-center justify-center text-black">
                                     <Mail className="dark:text-white"/>
