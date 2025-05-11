@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/drawer"
 import {Button} from "@/components/ui/button";
 import {useState} from "react";
-import {Contact, Mail, Phone} from "lucide-react";
+import {Contact, Mail} from "lucide-react";
 import Link from "next/link";
 import LinkedinIcon from "@/components/icons/linkedin";
 
