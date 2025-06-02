@@ -5,11 +5,12 @@ import {
     Drawer,
     DrawerContent,
 } from "@/components/ui/drawer"
-import {useState} from "react";
+import { useState } from "react";
 import DonateQrisDialog from "@/components/buttons/donate/donate-qris-dialog";
-import {useSearchParams} from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import DonateWalletDialog from "./donate-wallet-dialog";
 
-export default function DonateButton (){
+export default function DonateButton() {
     const searchParams = useSearchParams();
     const [isOpen, setIsOpen] = useState(!!searchParams.get("donate"));
 
@@ -23,6 +24,11 @@ export default function DonateButton (){
             <Drawer open={isOpen} onOpenChange={setIsOpen}>
                 <DrawerContent>
                     <div className="container max-w-2xl mx-auto space-y-4 py-24">
+                        <div className="mx-4">
+
+                            <DonateWalletDialog />
+
+                        </div>
                         <div className="mx-4">
                             <DonateQrisDialog />
                         </div>
